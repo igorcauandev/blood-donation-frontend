@@ -1,0 +1,72 @@
+<div class="dashboard">
+  <header class="dashboard__topbar">
+    <span>Página Principal</span>
+  </header>
+
+  <main class="dashboard__content">
+    <h1 class="dashboard__title">Home Page</h1>
+
+    <div class="dashboard__top-row">
+
+      <!-- Card: Tipos Disponíveis -->
+      <div class="card">
+        <h2 class="card__title">Tipos Disponíveis</h2>
+        <div class="blood-grid">
+          <span class="blood-badge">A+</span>
+          <span class="blood-badge">B+</span>
+          <span class="blood-badge">AB+</span>
+          <span class="blood-badge">A-</span>
+          <span class="blood-badge blood-badge--empty">O-</span>
+          <span class="blood-badge">AB-</span>
+          <span class="blood-badge">B-</span>
+          <span class="blood-badge">O+</span>
+        </div>
+      </div>
+
+      <!-- Card: Últimos Pacientes -->
+      <div class="card">
+        <h2 class="card__title">Últimos Pacientes</h2>
+        <ul class="patient-list">
+          @for (paciente of ultimosPacientes; track paciente.nome) {
+            <li class="patient-item">
+              <span class="patient-item__date">{{ paciente.data }}</span>
+              <span class="patient-item__name">{{ paciente.nome }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Card: Estoque -->
+      <div class="card">
+        <h2 class="card__title">Estoque</h2>
+        <ul class="stock-list">
+          @for (item of estoque; track item.tipo) {
+            <li class="stock-item">
+              <span class="stock-badge" [class.stock-badge--empty]="item.quantidade === 0">
+                {{ item.tipo }}
+              </span>
+              <span class="stock-desc">{{ item.quantidade }} Bolsas de {{ item.tipo }} / {{ item.ml }}ml</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Card: Últimas Atividades -->
+    <div class="card">
+      <h2 class="card__title card__title--icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        Últimas Atividades:
+      </h2>
+      <ul class="activity-list">
+        @for (atividade of ultimasAtividades; track atividade.id) {
+          <li class="activity-item">
+            <span class="activity-item__date">{{ atividade.data }}</span>
+            <span class="activity-item__text">{{ atividade.descricao }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </main>
+</div>

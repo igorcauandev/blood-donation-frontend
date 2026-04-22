@@ -1,0 +1,177 @@
+.dashboard {
+  margin-left: 60px;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.dashboard__topbar {
+  height: 48px;
+  background-color: white;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.dashboard__content {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dashboard__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.dashboard__top-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.card__title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.card__title--icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.card__title--icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #888;
+}
+
+/* Tipos de sangue */
+.blood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.blood-badge {
+  background-color: #fbeaea;
+  border: 1px solid #f0a0a0;
+  border-radius: 6px;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #771415;
+}
+
+.blood-badge--empty {
+  background-color: #f0f0f0;
+  border-color: #d0d0d0;
+  color: #666;
+}
+
+/* Pacientes */
+.patient-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.patient-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.patient-item__date {
+  font-size: 0.75rem;
+  color: #999;
+  min-width: 70px;
+}
+
+.patient-item__name {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* Estoque */
+.stock-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stock-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stock-badge {
+  background-color: #fbeaea;
+  border: 1px solid #f0a0a0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #771415;
+  min-width: 38px;
+  text-align: center;
+}
+
+.stock-badge--empty {
+  background-color: #f0f0f0;
+  border-color: #d0d0d0;
+  color: #666;
+}
+
+.stock-desc {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Atividades */
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.activity-item__date {
+  font-size: 0.75rem;
+  color: #999;
+  min-width: 70px;
+}
+
+.activity-item__text {
+  font-size: 0.8rem;
+  color: #333;
+}
